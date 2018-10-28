@@ -1,0 +1,23 @@
+<head>
+	<title> Olympian Update </title>
+</head>
+<body>
+	<h1> Update {{olympian.name}} </h1>
+	<form id="" action="/olympian" method="post">
+		"Olympian Name: "
+		<input type="text" name="name" value="{{olympian.name}}">
+		"Nation ID: "
+			<select> name="Nation ID" id="olympian-nation-selector" {{#each nation}} 
+				<option> value="{{id}}">{{name}} </option> {{/each}} 
+			</select>
+		"Gender: "
+		<input type="text" name="gender" value="{{olympian.gender}}">
+		"DOB: "
+		<input type="date" name="DOB" value="{{olympian.DOB}}">
+		"Hometown: "  
+		<input type="text" name="" value="{{olympian.hometown}}">
+	</form>
+
+</body>
+
+<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->
