@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+
+
+		<title> Team Podium Page </title>
+	</head>
+	<body>
+		<h3> Add New Team Winner </h3>
+		<form id="" action="/teamPodium" method="post">
+			"Team Event ID: "
+				<select> name="Team Event ID" id="olympian-nation-selector" {{#each nation}} 
+					<option> value="{{id}}">{{name}} </option> {{/each}} 
+				</select>
+			"Nation Team ID: "
+				<select> name="Nation Team ID" id="olympian-nation-selector" {{#each nation}} 
+					<option> value="{{id}}">{{name}} </option> {{/each}} 
+				</select>
+			"Medal ID: "
+				<select> name="Medal ID" id="olympian-nation-selector" {{#each nation}} 
+					<option> value="{{id}}">{{name}} </option> {{/each}} 
+				</select>
+		</form>
+
+	<h3> Current Nation Team Winners </h3>
+		"{{#each Nation Team}}
+		{{/each}}"
+
+		<table>
+			<thead>
+				<tr> 
+					<th> Team Podium ID </th>
+					<th> Team Event ID </th>
+					<th> Nation Team ID </th>
+					<th> Medal ID </th>
+				</tr>
+			</thead> 
+			<tbody>
+				<tr>
+					<td> {{Team Podium ID}}</td>
+					<td> {{Team Event ID}} </td>
+					<td> {{Nation Team ID}} </td>
+					<td> {{Medal ID}} </td>
+					<td> <button onclick="deleteOlympian{{Olympian ID}}"> Delete </button> </td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	</html>
+
+	<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->
