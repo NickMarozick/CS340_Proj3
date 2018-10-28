@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+
+
+		<title> Nation Team Roster Page </title>
+	</head>
+		<body>
+			<h1> Nation Team Roster Page </h1>
+			<h3> Add New Nation Team Member </h3>
+			<form id="" action="/nationTeam" method="post">
+				"Nation Team ID: "
+					<select> name="Nation Team ID" id="Nation Team-nation-selector" {{#each nation team}} 
+						<option> value="{{id}}">{{name}} </option> {{/each}} 
+					</select>
+					"Olympian ID: "
+					<select> name="Olympian ID" id="Olympian-selector" {{#each olympian}} 
+						<option> value="{{id}}">{{name}} </option> {{/each}} 
+					</select>
+					<td> <button onclick="add Nation Team Member" {{ID}}> Add </button></td>
+			</form>
+
+			<h3> Current Nation Team Rosters </h3>
+			"{{#each Nation Team Roster Entry}}
+			{{/each}}"
+
+			<table>
+				<thead>
+					<tr> 
+						<th> ID </th>
+						<th> Nation Team ID </th>
+						<th> Olympian ID </th>
+					</tr>
+				</thead> 
+				<tbody>
+					<tr>
+						<td> {{ID}}</td>
+						<td> {{Nation Team ID}} </td>
+						<td> {{Olympian ID}} </td>
+						<td> <button onclick="delete Nation Team {{Nation Team ID}}"> Delete </button></td>
+						<!--    <td> <a href="Nation Team Update"></a></td>   needs to stem ID -->
+					</tr>
+				</tbody>
+			</table>
+		</body>
+
+		<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->
