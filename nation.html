@@ -1,0 +1,33 @@
+<head>
+	<title> Nation Page </title>
+</head>
+<body>
+	<h3> Add New Nation </h3>
+	<form id="" action="/nation" method="post">
+		"Nation Name: "
+		<input type="text" name="name" value="{{Nation.name}}">
+	</form>
+
+	<h3> Current Nations </h3>
+	"{{#each Nation}}
+	{{/each}}"
+
+	<table>
+		<thead>
+			<tr> 
+				<th> Nation ID </th>
+				<th> Nation Name </th>
+			</tr>
+		</thead> 
+		<tbody>
+			<tr>
+				<td> {{Nation ID}}</td>
+				<td> {{Nation Name}} </td>
+				<td> <button onclick="deleteNation{{Nation ID}}"> Delete </button></td>
+				<!-- could add an update area -->
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->
