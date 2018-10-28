@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+
+		<title> Individual Events Page </title>
+	</head>
+	<body>
+		<h3> Add New Individual Event </h3>
+		<form id="" action="/individualEvent" method="post">
+			"Individual Event Name: "
+			<input type="text" name="name" value="{{individualEvent.name}}">
+		</form>
+
+		<h3> Current Individual Events </h3>
+		"{{#each Individual Event}}
+		{{/each}}"
+
+		<table>
+			<thead>
+				<tr> 
+					<th> Individual Event ID </th>
+					<th> Individual Event Names </th>
+				</tr>
+			</thead> 
+			<tbody>
+				<tr>
+					<td> {{Individual Event ID}}</td>
+					<td> {{Individual Event Name}} </td>
+					<td> <button onclick="deleteIndvidualEvent{{Individual Event ID}}"> Delete </button></td>
+					<!-- could add an update area -->
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+	<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->

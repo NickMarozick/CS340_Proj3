@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+
+
+		<title> Medals Page </title>
+	</head>
+	<body>
+		<h3> Add New Medals </h3>
+		<form id="" action="/Medals" method="post">
+			"Medals Type: "
+			<input type="text" name="name" value="{{Medals.name}}">
+		</form>
+
+		<h3> Current Medalss </h3>
+		"{{#each Medals}}
+		{{/each}}"
+
+		<table>
+			<thead>
+				<tr> 
+					<th> Medals ID </th>
+					<th> Medals Name </th>
+				</tr>
+			</thead> 
+			<tbody>
+				<tr>
+					<td> {{Medals ID}}</td>
+					<td> {{Medals Name}} </td>
+					<td> <button onclick="deleteMedals{{Medals ID}}"> Delete </button></td>
+					<!-- could add an update area -->
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+	<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->

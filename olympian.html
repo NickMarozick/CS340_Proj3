@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+
+
+		<title> Olympian Page </title>
+	</head>
+	<body>
+		<h3> Add New Olympian </h3>
+		<form id="" action="/olympian" method="post">
+			"Olympian Name: "
+			<input type="text" name="name" value="{{olympian.name}}">
+			"Nation ID: "
+				<select> name="Nation ID" id="olympian-nation-selector" {{#each nation}} 
+					<option> value="{{id}}">{{name}} </option> {{/each}} 
+				</select>
+			"Gender: "
+			<input type="text" name="gender" value="{{olympian.gender}}">
+			"DOB: "
+			<input type="date" name="DOB" value="{{olympian.DOB}}">
+			"Hometown: "  
+			<input type="text" name="" value="{{olympian.hometown}}">
+		</form>
+
+		<h3> Current Olympians </h3>
+		"{{#each Olympian}}
+		{{/each}}"
+
+		<table>
+			<thead>
+				<tr> 
+					<th> Olympian ID </th>
+					<th> Olympian Name </th>
+					<th> Nation ID </th>
+					<th> Gender </th>
+					<th> DOB </th>
+					<th> Hometown </th>
+				</tr>
+			</thead> 
+			<tbody>
+				<tr>
+					<td> {{Olympian ID}}</td>
+					<td> {{Olympian Name}} </td>
+					<td> {{Nation ID}} </td>
+					<td> {{Gender}} </td>
+					<td> {{Hometown}} </td>
+					<td> <button onclick="deleteOlympian{{Olympian ID}}"> Delete </button></td>
+					<td> <a href="olympianUpdate"></a></td> <!-- needs to stem ID -->
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+	<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->

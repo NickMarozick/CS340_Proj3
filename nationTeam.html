@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+
+
+		<title> Nation Team Page </title>
+	</head>
+		<body>
+			<h3> Add New Nation Team </h3>
+			<form id="" action="/nationTeam" method="post">
+				"Nation Team Name: "
+				<input type="text" name="name" value="{{nationTeam.name}}">
+				"Nation ID: "
+					<select> name="Nation ID" id="Nation Team-nation-selector" {{#each nation}} 
+						<option> value="{{id}}">{{name}} </option> {{/each}} 
+					</select>
+			</form>
+
+			<h3> Current Nation Teams </h3>
+			"{{#each Nation Team}}
+			{{/each}}"
+
+			<table>
+				<thead>
+					<tr> 
+						<th> Nation Team ID </th>
+						<th> Nation Team Name </th>
+						<th> Nation ID </th>
+					</tr>
+				</thead> 
+				<tbody>
+					<tr>
+						<td> {{Nation Team ID}}</td>
+						<td> {{Nation Team Name}} </td>
+						<td> {{Nation ID}} </td>
+						<td> <button onclick="delete Nation Team {{Nation Team ID}}"> Delete </button></td>
+						<!--    <td> <a href="Nation Team Update"></a></td>   needs to stem ID -->
+					</tr>
+				</tbody>
+			</table>
+		</body>
+
+		<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->

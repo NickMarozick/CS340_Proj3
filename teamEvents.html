@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+
+
+		<title> Team Events Page </title>
+	</head>
+	<body>
+		<h3> Add New Team Event </h3>
+		<form id="" action="/teamEvent" method="post">
+			"Team Event Name: "
+			<input type="text" name="name" value="{{teamEvent.name}}">
+		</form>
+
+		<h3> Current Team Events </h3>
+		"{{#each Team Event}}
+		{{/each}}"
+
+		<table>
+			<thead>
+				<tr> 
+					<th> Team Event ID </th>
+					<th> Team Event Names </th>
+				</tr>
+			</thead> 
+			<tbody>
+				<tr>
+					<td> {{Team Event ID}}</td>
+					<td> {{Team Event Name}} </td>
+					<td> <button onclick="deleteTeamEvent{{Team Event ID}}"> Delete </button></td>
+					<!-- could add an update area -->
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+	<!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->
