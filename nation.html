@@ -1,33 +1,52 @@
-<head>
-	<title> Nation Page </title>
-</head>
-<body>
-	<h3> Add New Nation </h3>
-	<form id="" action="/nation" method="post">
-		"Nation Name: "
-		<input type="text" name="name" value="{{Nation.name}}">
-	</form>
+<!DOCTYPE html>
+	<html lang="en">
 
-	<h3> Current Nations </h3>
-	"{{#each Nation}}
-	{{/each}}"
+	<head>
+		<meta charset="utf-8"/>
+		<title> Nation Page </title>
+	</head>
+	<body>
+		<h3> Add New Nation </h3>
+		<form id="" action="/nation" method="post">
+			Nation Name: 
+			<input type="text" name="name">
+	<!-- 		<input type="text" name="name" value="{{Nation.name}}">
+	 -->	</form>
 
-	<table>
-		<thead>
-			<tr> 
-				<th> Nation ID </th>
-				<th> Nation Name </th>
-			</tr>
-		</thead> 
-		<tbody>
-			<tr>
-				<td> {{Nation ID}}</td>
-				<td> {{Nation Name}} </td>
-				<td> <button onclick="deleteNation{{Nation ID}}"> Delete </button></td>
-				<!-- could add an update area -->
-			</tr>
-		</tbody>
-	</table>
-</body>
+		<h3> Current Nations </h3>
+	<!-- 	"{{#each Nation}}
+		{{/each}}" -->
+
+		<table id='nation-table'>
+			<thead>
+				<tr> 
+					<th> Nation ID </th>
+					<th> Nation Name </th>
+				</tr>
+			</thead> 
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Italy</td>
+					<td> <button onclick="deleteNation{{Nation ID}}"> Delete </button></td>
+				</tr>
+<!-- 				<tr>
+					<td>2</td>
+					<td>Greece</td>
+					<td> <button onclick="deleteNation{{Nation ID}}"> Delete </button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Serbia</td>
+					<td> <button onclick="deleteNation{{Nation ID}}"> Delete </button></td>
+				</tr> -->
+					<!-- could add an update area -->
+				</tr>
+			</tbody>
+		</table>
+
+		<script type="text/javascript" src="functions.js"></script>
+	</body>
+</html>
 
 <!-- Referenced http://web.engr.oregonstate.edu/~hedaoos/CS340-Sample-Web-App/views/ -->

@@ -1,20 +1,25 @@
 
 
-let myList = document.getElementById('nation')
-let myListButton = document.getElementById('nationButton')
+// let myList = document.getElementById('nation')
+// let myListButton = document.getElementById('nationButton')
 
 
-myListButton.addEventListener('click', ()=> {
+// myListButton.addEventListener('click', ()=> {
 
-	addNation('Serbia')
-	addNation('Greece')
-	addNation('Italy')
+// 	addNation('Serbia')
+// 	addNation('Greece')
+// 	addNation('Italy')
 
-})
+// })
 
-function addNation(nationName) {
+// function addNation(nationName) {
 
-	var myNation = document.createElement("li");
-	myNation.appendChild(document.createTextNode(nationName));
-	myList.appendChild(myNation)
+// 	var myNation = document.createElement("li");
+// 	myNation.appendChild(document.createTextNode(nationName));
+// 	myList.appendChild(myNation)
+// }
+
+window.onload = function() {
+
+	console.log('just loaded')
 }
